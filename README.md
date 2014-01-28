@@ -1,18 +1,10 @@
-ProjetCAW
-===========
-
 Serveur
 ====
-Gary
-Jérémy
-Thomas
+Gary - Jérémy - Thomas
 
 Client
 ====
-Laura
-Jamila
-Grégory
-Alaaeddine
+Laura - Jamila - Grégory - Alaaeddine
 
 Liste des tâches + répartition
 ====
