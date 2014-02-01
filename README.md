@@ -1,6 +1,6 @@
 Serveur
 ====
-Gary - Jérémy - Thomas - ismail
+Gary - Jérémy - Thomas
 
 Client
 ====
