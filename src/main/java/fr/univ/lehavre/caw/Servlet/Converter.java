@@ -1,5 +1,6 @@
 package fr.univ.lehavre.caw.Servlet;
 
+import fr.univ.lehavre.caw.Outils.Caractere;
 import fr.univ.lehavre.caw.Outils.MapVersJson;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -29,10 +30,11 @@ public class Converter extends HttpServlet {
         String requete = request.getQueryString();
         if(requete.length()==1) {
             char caractere = request.getQueryString().charAt(0);
-            int val = MapVersJson.conversionDec(caractere);
-            String hex = MapVersJson.conversionHex(val);
-            String html = MapVersJson.conversionHTML(val);
-            String unicode = MapVersJson.conversionUnicode(hex);
+            Caractere c = new Caractere(caractere);
+            int val = c.getDecimal();
+            String hex = c.getHex();
+            String html = c.getHtml();
+            String unicode = c.getUnicode();
 
             HashMap<String, String> conversions = new HashMap<>();
             conversions.put("dec", Integer.toString(val));
