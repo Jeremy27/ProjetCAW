@@ -5,6 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- TO DO : importer le fichier css -->
+        <!-- <link rel="stylesheet" href="blabla/fichier.css"> -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.js"></script>
 
         <title>CharConverter</title>
@@ -20,6 +21,23 @@
         </form>
 
         <!-- TO DO : tableau  -->
+        <!-- 
+        <table border="1"> 
+         <caption> Valeurs numériques d'un caractère </caption> 
+         <tr> 
+                  <th> Caractere </th> 
+                  <th> Decimal </th> 
+                  <th> Hexadecimal </th> 
+                  <th> HTML </th> 
+         </tr> 
+         <tr> 
+                  <td>  </td> 
+                  <td>  </td> 
+                  <td>  </td> 
+                  <td>  </td> 
+         </tr> 
+        </table> 
+        -->
 
         <script>
 
