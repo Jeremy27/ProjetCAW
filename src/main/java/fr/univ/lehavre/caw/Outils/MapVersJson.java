@@ -6,23 +6,7 @@ import javax.json.JsonArrayBuilder;
 import javax.json.JsonBuilderFactory;
 import javax.json.JsonObjectBuilder;
 
-public class Convertisseur {
-    public static String conversionHex(int val) {
-        return Integer.toHexString(val);
-    }
-    
-    public static int conversionDec(char c) {
-        return Character.getNumericValue(c);
-    }
-    
-    public static String conversionHTML(int val) {
-        return "&#" + val + ";";
-    }
-    
-    public static String conversionUnicode(String hex) {
-        return "\\u" + hex;
-    }
-    
+public class MapVersJson {
     public static String conversionJson(Map<String, String> map) {
         JsonBuilderFactory factory = Json.createBuilderFactory(map);
         JsonArrayBuilder array = factory.createArrayBuilder();
