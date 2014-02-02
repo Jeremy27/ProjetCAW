@@ -22,7 +22,7 @@ public class Converter extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     /**
-     * @param request
+     * @param request le contenu de la requête transmise au serveur
      * @param response
      * @throws javax.servlet.ServletException
      * @throws java.io.IOException
@@ -42,6 +42,7 @@ public class Converter extends HttpServlet {
         conversions.put("hex", hex);
         conversions.put("html", html);
         conversions.put("unicode", unicode);
+        
         
         JsonBuilderFactory factory = Json.createBuilderFactory(conversions);
         JsonArrayBuilder array = factory.createArrayBuilder();
