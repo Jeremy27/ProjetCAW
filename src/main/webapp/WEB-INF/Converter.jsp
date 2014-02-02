@@ -47,7 +47,7 @@
   	 			 // envoie le caractere au serveur
 	             $.ajax(
 	             { 
-			           url:'converter', 
+			           url:'Converter', 
 			           type:'POST', 
 			           dataType: 'json', 
 			           data:{ caractere: caractere},
@@ -59,7 +59,7 @@
 	          		   error: function(e) 
 	          		   {
 	                         alert(e.status);
-	                    }
+	                   }
 	       		});
   	 		 }
   	 		 
