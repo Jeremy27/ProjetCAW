@@ -1,14 +1,14 @@
 Serveur
 ====
-Gary - Jérémy - Thomas <br>
-Accès à la branche : 
+Gary - Jérémy - Thomas <br><br>
+Accès à la branche : <br>
 git push origin serveur <br>
 git pull origin serveur
 
 Client
 ====
-Laura - Jamila - Grégory - Alaaeddine <br>
-Accès à la branche :
+Laura - Jamila - Grégory - Alaaeddine <br><br>
+Accès à la branche :<br>
 git push origin client <br>
 git pull origin client
 
