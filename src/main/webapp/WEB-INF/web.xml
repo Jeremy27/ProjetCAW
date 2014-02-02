@@ -8,4 +8,14 @@
   
   <!-- TO DO : mapping servlet -->
   
+  <servlet>
+  	<servlet-name>Converter</servlet-name>
+  	<servlet-class>fr.univ.lehavre.caw.Servlet.Converter</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Converter</servlet-name>
+  	<url-pattern>/Converter</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
