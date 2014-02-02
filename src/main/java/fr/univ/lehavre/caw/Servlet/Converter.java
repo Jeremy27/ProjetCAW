@@ -1,5 +1,6 @@
 package fr.univ.lehavre.caw.Servlet;
 
+import fr.univ.lehavre.caw.Outils.Convertisseur;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -31,50 +32,26 @@ public class Converter extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        char caractere = request.getQueryString().charAt(0);
-        int val = conversionDec(caractere);
-        String hex = conversionHex(val);
-        String html = conversionHTML(val);
-        String unicode = conversionUnicode(hex);
-        
-        HashMap<String, String> conversions = new HashMap<>();
-        conversions.put("dec", Integer.toString(val));
-        conversions.put("hex", hex);
-        conversions.put("html", html);
-        conversions.put("unicode", unicode);
-        
-        
-        JsonBuilderFactory factory = Json.createBuilderFactory(conversions);
-        JsonArrayBuilder array = factory.createArrayBuilder();
-        
-        for(Map.Entry<String, String> me:conversions.entrySet()) {
-            JsonObjectBuilder job = factory.createObjectBuilder();
-            job.add(me.getKey(), me.getValue());
-            array.add(job);
-        }
-        
-        array.build();
-        
-        response.setContentType("application/json; charset=UTF-8;");
-        try (PrintWriter out = response.getWriter()) {
-            out.println(array.toString());
-        }
-    }
-    
-    private String conversionHex(int val) {
-        return Integer.toHexString(val);
-    }
-    
-    private int conversionDec(char c) {
-        return Character.getNumericValue(c);
-    }
-    
-    private String conversionHTML(int val) {
-        return "&#" + val + ";";
-    }
-    
-    private String conversionUnicode(String hex) {
-        return "\\u" + hex;
+        String requete = request.getQueryString();
+        if(requete.length()==1) {
+            char caractere = request.getQueryString().charAt(0);
+            int val = Convertisseur.conversionDec(caractere);
+            String hex = Convertisseur.conversionHex(val);
+            String html = Convertisseur.conversionHTML(val);
+            String unicode = Convertisseur.conversionUnicode(hex);
+
+            HashMap<String, String> conversions = new HashMap<>();
+            conversions.put("dec", Integer.toString(val));
+            conversions.put("hex", hex);
+            conversions.put("html", html);
+            conversions.put("unicode", unicode);
+            response.setContentType("application/json; charset=UTF-8;");
+            
+            String json = Convertisseur.conversionJson(conversions);
+            try (PrintWriter out = response.getWriter()) {
+                out.println(json);
+            }
+        } 
     }
 
 }
