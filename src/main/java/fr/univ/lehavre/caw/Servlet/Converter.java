@@ -21,6 +21,7 @@ public class Converter extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{	
 		// TO DO : renvoie sur la page d'accueil
+		
 	}
 
 	/**
@@ -28,7 +29,20 @@ public class Converter extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{	
-		// TO DO : recoit le caractere et renvoie les valeurs converties
+		String carac = request.getParameter("caractere");
+		
+		int val =(int)carac.charAt(0);
+		String carac_decimal = new String(val+""); 
+		String carac_hexa = Integer.toString(val, 16);
+		String carac_html = "&#"+val;
+		String carac_unicode = "&0x"+carac_hexa;
+
+		String s = "{\"carac\":\""+carac+"\",\"decimal\":\""+carac_decimal+"\",\"hexa\":\""+carac_hexa+"\",\"html\":\""+carac_html+"\",\"unicode\":\""+carac_unicode+"\"}";
+	
+		System.out.println(s);
+		
+		// TO DO : renvoie les valeurs converties au client
+		
 	}
 
 }
