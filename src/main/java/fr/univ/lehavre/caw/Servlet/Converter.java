@@ -1,6 +1,9 @@
 package fr.univ.lehavre.caw.Servlet;
 
+import fr.univ.lehavre.caw.Outils.Caractere;
+import fr.univ.lehavre.caw.Outils.MapVersJson;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 import javax.json.Json;
@@ -29,48 +32,27 @@ public class Converter extends HttpServlet {
      */
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        
-        char caractere = request.getQueryString().charAt(0);
-        int val = conversionDec(caractere);
-        String hex = conversionHex(val);
-        String html = conversionHTML(val);
-        String unicode = conversionUnicode(hex);
-        
-        HashMap<String, String> conversions = new HashMap<>();
-        conversions.put("dec", Integer.toString(val));
-        conversions.put("hex", hex);
-        conversions.put("html", html);
-        conversions.put("unicode", unicode);
-        
-        JsonBuilderFactory factory = Json.createBuilderFactory(conversions);
-        JsonArrayBuilder array = factory.createArrayBuilder();
-        
-        for(Map.Entry<String, String> me:conversions.entrySet()) {
-            JsonObjectBuilder job = factory.createObjectBuilder();
-            job.add(me.getKey(), me.getValue());
-            array.add(job);
+        String param = request.getParameter("caractere");
+        if(param!=null && param.length()==1) {
+            char caractere = param.charAt(0);
+            Caractere c = new Caractere(caractere);
+            int val = c.getDecimal();
+            String hex = c.getHex();
+            String html = c.getHtml();
+            String unicode = c.getUnicode();
+
+            HashMap<String, String> conversions = new HashMap<>();
+            conversions.put("dec", Integer.toString(val));
+            conversions.put("hex", hex);
+            conversions.put("html", html);
+            conversions.put("unicode", unicode);
+
+
+
+            response.setContentType("application/json; charset=UTF-8;");
+            try(PrintWriter out=response.getWriter()) {
+                out.println(MapVersJson.conversionJson(conversions));
+            }
         }
-        
-        array.build();
-        
-        response.setContentType("application/json; charset=UTF-8;");
-        System.out.println(array.toString());
-        
-    }
-    
-    private String conversionHex(int val) {
-        return Integer.toHexString(val);
-    }
-    
-    private int conversionDec(char c) {
-        return Character.getNumericValue(c);
-    }
-    
-    private String conversionHTML(int val) {
-        return "&#" + val + ";";
-    }
-    
-    private String conversionUnicode(String hex) {
-        return "\\u" + hex;
     }
 }
