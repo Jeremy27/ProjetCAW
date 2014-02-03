@@ -5,11 +5,6 @@ import fr.univ.lehavre.caw.Outils.MapVersJson;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
-import java.util.Map;
-import javax.json.Json;
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonBuilderFactory;
-import javax.json.JsonObjectBuilder;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -41,18 +36,15 @@ public class Converter extends HttpServlet {
             String html = c.getHtml();
             String unicode = c.getUnicode();
 
-            HashMap<String, String> conversions = new HashMap<>();
+            HashMap<String, String> conversions = new HashMap<String, String>();
             conversions.put("dec", Integer.toString(val));
             conversions.put("hex", hex);
             conversions.put("html", html);
             conversions.put("unicode", unicode);
-
-
-
+            
             response.setContentType("application/json; charset=UTF-8;");
-            try(PrintWriter out=response.getWriter()) {
-                out.println(MapVersJson.conversionJson(conversions));
-            }
+            PrintWriter out=response.getWriter();
+            out.println(MapVersJson.conversionJson(conversions));
         }
     }
 }
