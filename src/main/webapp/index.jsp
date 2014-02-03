@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 <form class="form" name="form" action="traite" method="post">  
     <p >  
-      <label for="name">Caractere : </label>  
+      <label for="name"> Caractere : </label>  
         <input type= "text" name = "id"/>  
         <input type="submit" value="Envoyer" id = "submit"/>  
    </p>    

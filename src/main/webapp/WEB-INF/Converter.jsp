@@ -22,13 +22,13 @@
 
         <table class = "table table-hover" border="1" id="tab">  
 
-         <tr> 
+         <thead> 
                   <th> Caractère </th> 
                   <th> Décimal </th> 
                   <th> Hexadécimal </th> 
                   <th> HTML </th> 
 		  <th> Unicode </th>
-         </tr> 
+         </thead> 
         </table> 
 
         <script>
