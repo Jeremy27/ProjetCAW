@@ -24,6 +24,7 @@ public class Caractere {
         _decimal = Integer.parseInt(Integer.toString(_caractere));
         _hex = Integer.toHexString(_decimal);
         _html = StringEscapeUtils.escapeHtml(Character.toString(c));
+        
         _unicode = "\\u" + _hex;
     }
 
