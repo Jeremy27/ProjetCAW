@@ -22,13 +22,13 @@
 
         <table class = "table table-hover" border="1" id="tab">  
 
-         <tr> 
+         <thead> 
                   <th> Caractère </th> 
                   <th> Décimal </th> 
                   <th> Hexadécimal </th> 
                   <th> HTML </th> 
 		  <th> Unicode </th>
-         </tr> 
+         </thead> 
         </table> 
 
         <script>
@@ -66,15 +66,46 @@
                                     success: function(data)
                                     {
     
-                          		  $("#tab").append(
-                          		  "<tr>
-                          		  <td>"+caractere+"</td>
-                          		  <td>"+data.dec+"</td>
-                          		  <td>"+data.hex+"</td>
-                          		  <td>"+data.html+"</td>
-                          		  <td>"+data.unicode+"</td>
-                          		  </tr>"
-                          		  );
+                          		  var ligne = document.createElement("tr");
+                                        
+                                        var caractere = document.createElement("td");
+                                        var texteCaractere = document.createTextNode(data.char);
+                                        caractere.appendChild(texteCaractere);
+                                        
+                                        var dec = document.createElement("td");
+                                        var texteDec = document.createTextNode(data.dec);
+                                        dec.appendChild(texteDec);
+                                        
+                                        var hex = document.createElement("td");
+                                        var texteHex = document.createTextNode(data.hex);
+                                        hex.appendChild(texteHex);
+                                        
+                                        var htmlBase = String(data.html);
+                                        htmlBase = htmlBase.substring(1, htmlBase.length-1);
+                                        var html = document.createElement("td");
+                                        
+                                        var texteHTML;
+                                        if(data.char !== htmlBase) {
+                                            texteHTML = document.createTextNode("&" + htmlBase + ";");
+                                        } else {
+                                            texteHTML = document.createTextNode(htmlBase);
+                                        }
+                                        
+                                        html.appendChild(texteHTML);
+                                        
+                                        
+                                        var unicode = document.createElement("td");
+                                        var texteUnicode = document.createTextNode(data.unicode);
+                                        unicode.appendChild(texteUnicode);
+                                        
+                                        
+                                        ligne.appendChild(caractere);
+                                        ligne.appendChild(dec);
+                                        ligne.appendChild(hex);
+                                        ligne.appendChild(html);
+                                        ligne.appendChild(unicode);
+                                        
+                                        $("#tab").append(ligne);
 
                                     },
                                     error: function(e)
