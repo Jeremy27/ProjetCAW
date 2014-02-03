@@ -20,7 +20,7 @@
             <input type="button" id="submit" value="Send"/>
         </form>
 
-        <table border="1" id="tab"> 
+        <table border="1" id="1"> 
          <caption> Valeurs numériques d'un caractère </caption> 
          <tr> 
                   <th> Caractere </th> 
@@ -67,6 +67,7 @@
                                     success: function(data)
                                     {
                                         // TO DO : recupere la reponse du serveur et l'envoie au tableau
+                                        $("#tab").append(<tr><td>caractere</td><td>data.dec</td><td>data.hex</td><td>data.html</td><td>data.unicode</td></tr>');
                                     },
                                     error: function(e)
                                     {
