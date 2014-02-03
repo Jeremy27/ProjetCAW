@@ -65,13 +65,7 @@
                                     data: {caractere: caractere},
                                     success: function(data)
                                     {
-<<<<<<< HEAD
-                                        
                                         var ligne = document.createElement("tr");
-=======
-    
-                          		  var ligne = document.createElement("tr");
->>>>>>> bdae3d9d3c335b16564c1cdfbefacea8a2f24abe
                                         
                                         var caractere = document.createElement("td");
                                         var texteCaractere = document.createTextNode(data.char);
