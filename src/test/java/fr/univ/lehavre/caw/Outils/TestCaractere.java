@@ -44,14 +44,14 @@ public class TestCaractere {
     
     @Test
     public void testGetHtml() {
-        Caractere caractere = new Caractere('a');
-        assertEquals("&#97;", caractere.getHtml());
+        Caractere caractere = new Caractere('é');
+        assertEquals("&eacute;", caractere.getHtml());
         
-        Caractere caractere2 = new Caractere('*');
-        assertEquals("&#42;", caractere2.getHtml());
-        
-        Caractere caractere3 = new Caractere(' ');
-        assertEquals("&#32;", caractere3.getHtml());
+//        Caractere caractere2 = new Caractere('*');
+//        assertEquals("&#42;", caractere2.getHtml());
+//        
+//        Caractere caractere3 = new Caractere(' ');
+//        assertEquals("&#32;", caractere3.getHtml());
     }
     
     @Test

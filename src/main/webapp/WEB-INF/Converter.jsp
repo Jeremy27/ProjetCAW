@@ -65,8 +65,8 @@
                                     data: {caractere: caractere},
                                     success: function(data)
                                     {
-    
-                          		  $("#tab").append("<tr><td>"+caractere+"</td><td>"+data.dec+"</td><td>"+data.hex+"</td><td>"+data.html+"</td><td>"+data.unicode+"</td></tr>");
+                                        var 
+                                        $("#tab").append("<tr><td>"+caractere+"</td><td>"+data.dec+"</td><td>"+data.hex+"</td><td>"+escape(data.html)+"</td><td>"+data.unicode+"</td></tr>");
 
                                     },
                                     error: function(e)

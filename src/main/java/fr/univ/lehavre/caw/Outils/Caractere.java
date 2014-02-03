@@ -6,6 +6,8 @@
 
 package fr.univ.lehavre.caw.Outils;
 
+import org.apache.commons.lang.StringEscapeUtils;
+
 /**
  *
  * @author brokep
@@ -21,7 +23,7 @@ public class Caractere {
         _caractere = c;
         _decimal = Integer.parseInt(Integer.toString(_caractere));
         _hex = Integer.toHexString(_decimal);
-        _html = "&#" + _decimal + ";";
+        _html = StringEscapeUtils.escapeHtml(Character.toString(c));
         _unicode = "\\u" + _hex;
     }
 
