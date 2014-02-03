@@ -1,0 +1,143 @@
+body {
+	background: #FFFEEE;
+	color: #111111;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding: 20px;
+	}
+
+    input{   
+
+        padding: 9px;  
+        border: solid 1px #E5E5E5;  
+        outline: 0;  
+        font: normal 13px/100% Verdana, Tahoma, sans-serif;  
+
+        width: 400px;  
+
+        background: #FFFFFF url('bg_form.png') left top repeat-x;  
+        background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));  
+        background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);  
+
+      
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+        -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+        -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;  
+        
+        }  
+
+    input:hover, textarea:hover,  
+    input:focus, textarea:focus {   
+        border-color: #C9C9C9;   
+        -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;  
+        }  
+      
+    .form label {   
+        margin-left: 0px;   
+        color: black;   
+        }  
+      
+    #submit{  
+        width: auto;  
+        padding: 9px 15px;  
+        background: #E3E9E8;
+        border: 0;  
+        font-size: 14px;  
+        color: black;  
+        -moz-border-radius: 5px;  
+        -webkit-border-radius: 5px;  
+        }
+
+    #tab{  
+        width: auto;  
+        padding: 9px 15px;  
+        background: #818484;
+        border: 0;  
+        font-size: 14px;  
+        color: black;  
+        -moz-border-radius: 5px;  
+        -webkit-border-radius: 5px;  
+        }    
+
+.CSSTableGenerator {
+	margin:0px;padding:0px;
+	width:40%;
+	box-shadow: 5px 5px 1px #EEEEEE;   /* Arriere plan de tableau */
+	border:0px solid #000000;
+	
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+
+}.CSSTableGenerator table{
+    border-collapse: collapse;
+        border-spacing: 0;
+	width:100%;
+	height:20%;
+	margin:0px;padding:0px;
+
+
+
+
+}.CSSTableGenerator tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}.CSSTableGenerator tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}.CSSTableGenerator tr:hover td{
+	
+}
+
+.CSSTableGenerator tr:nth-child(odd){ 
+				background-color:#FFFAAA; 
+				}
+.CSSTableGenerator tr:nth-child(even)    { 
+				background-color:#ffffff; 
+				}
+.CSSTableGenerator td{
+	vertical-align:middle;	
+	border:0px solid #FFFFFF;
+	border-width:0px 5px 1px 5px;
+	text-align:left;
+	padding:10px;
+	font-size:10px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}
+.CSSTableGenerator tr:first-child td{
+		
+	background-color:#9EA5A4;
+	border:0px solid #FFFFFF;
+	text-align:center;
+	border-width:0px 5px 1px 5px;
+	font-size:14px;
+	font-family:Arial;
+	font-weight:bold;
+	color:#ffffff;
+}
+
