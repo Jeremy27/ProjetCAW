@@ -63,7 +63,7 @@ public class Converter extends HttpServlet {
             request.setAttribute("dec",conversionDec(c));
             request.setAttribute("html",conversionHTML(val));
             
-	        dispat = request.getRequestDispatcher("./Converter.jsp");  
+	        dispat = request.getRequestDispatcher("./webapp/WEB-INF/Converter.jsp");  
             dispat.forward(request, response);
             
             
