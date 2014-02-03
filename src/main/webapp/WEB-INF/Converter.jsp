@@ -5,8 +5,9 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <!-- TO DO : importer le fichier css -->
-        <!-- <link rel="stylesheet" href="blabla/fichier.css"> -->
+        <link rel="stylesheet" href="css/aladin.css"> 
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.min.css"> 
 
         <title>CharConverter</title>
     </head>
