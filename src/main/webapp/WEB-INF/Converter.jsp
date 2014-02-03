@@ -20,11 +20,12 @@
             <input type="button" id="submit" value="Send"/>
         </form>
 
-        <table class = "table table-hover" border="1" id="tab"> 
+        <table class = "table table-hover" border="1" id="tab">  
+
          <tr> 
-                  <th> Caractere </th> 
-                  <th> Decimal </th> 
-                  <th> Hexadecimal </th> 
+                  <th> Caractère </th> 
+                  <th> Décimal </th> 
+                  <th> Hexadécimal </th> 
                   <th> HTML </th> 
 		  <th> Unicode </th>
          </tr> 
