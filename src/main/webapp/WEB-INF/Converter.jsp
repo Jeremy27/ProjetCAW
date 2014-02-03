@@ -66,13 +66,15 @@
                                     success: function(data)
                                     {
     
-                          		  $("#tab").append("<tr>
+                          		  $("#tab").append(
+                          		  "<tr>
                           		  <td>"+caractere+"</td>
                           		  <td>"+data.dec+"</td>
                           		  <td>"+data.hex+"</td>
                           		  <td>"+data.html+"</td>
                           		  <td>"+data.unicode+"</td>
-                          		  </tr>");
+                          		  </tr>"
+                          		  );
 
                                     },
                                     error: function(e)
