@@ -19,7 +19,7 @@ public class Caractere {
     
     public Caractere(char c) {
         _caractere = c;
-        _decimal = Character.getNumericValue(_caractere);
+        _decimal = Integer.parseInt(Integer.toString(_caractere));
         _hex = Integer.toHexString(_decimal);
         _html = "&#" + _decimal + ";";
         _unicode = "\\u" + _hex;
