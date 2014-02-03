@@ -4,8 +4,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <!-- TO DO : importer le fichier css -->
-        <!-- <link rel="stylesheet" href="blabla/fichier.css"> -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/aladin.css">
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.js"></script>
 
         <title>CharConverter</title>
@@ -20,12 +20,12 @@
             <input type="button" id="submit" value="Send"/>
         </form>
 
-        <table border="1" id="tab"> 
-         <caption> Valeurs numériques d'un caractère </caption> 
+        <table class = "table table-hover" border="1" id="tab">  
+
          <tr> 
-                  <th> Caractere </th> 
-                  <th> Decimal </th> 
-                  <th> Hexadecimal </th> 
+                  <th> Caractère </th> 
+                  <th> Décimal </th> 
+                  <th> Hexadécimal </th> 
                   <th> HTML </th> 
 		  <th> Unicode </th>
          </tr> 
@@ -65,8 +65,13 @@
                                     data: {caractere: caractere},
                                     success: function(data)
                                     {
+<<<<<<< HEAD
                                         
                                         var ligne = document.createElement("tr");
+=======
+    
+                          		  var ligne = document.createElement("tr");
+>>>>>>> bdae3d9d3c335b16564c1cdfbefacea8a2f24abe
                                         
                                         var caractere = document.createElement("td");
                                         var texteCaractere = document.createTextNode(data.char);
