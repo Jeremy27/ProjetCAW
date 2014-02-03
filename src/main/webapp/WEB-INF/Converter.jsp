@@ -7,7 +7,7 @@
         <!-- TO DO : importer le fichier css -->
         <!-- <link rel="stylesheet" href="blabla/fichier.css"> -->
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.js"></script>
-
+<link rel="stylesheet" href="css/styles.css">
         <title>CharConverter</title>
     </head>
     <body>
@@ -23,9 +23,9 @@
         <table border="1" id="tab"> 
          <caption> Valeurs numériques d'un caractère </caption> 
          <tr> 
-                  <th> Caractere </th> 
-                  <th> Decimal </th> 
-                  <th> Hexadecimal </th> 
+                  <th> Caractère </th> 
+                  <th> Décimal </th> 
+                  <th> Hexadécimal </th> 
                   <th> HTML </th> 
 		  <th> Unicode </th>
          </tr> 
@@ -66,7 +66,15 @@
                                     success: function(data)
                                     {
     
-                          		  $("#tab").append("<tr><td>"+caractere+"</td><td>"+data.dec+"</td><td>"+data.hex+"</td><td>"+data.html+"</td><td>"+data.unicode+"</td></tr>");
+                          		  $("#tab").append(
+                          		  "<tr>
+                          		  <td>"+caractere+"</td>
+                          		  <td>"+data.dec+"</td>
+                          		  <td>"+data.hex+"</td>
+                          		  <td>"+data.html+"</td>
+                          		  <td>"+data.unicode+"</td>
+                          		  </tr>"
+                          		  );
 
                                     },
                                     error: function(e)
