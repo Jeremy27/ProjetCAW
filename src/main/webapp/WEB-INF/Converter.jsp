@@ -19,7 +19,16 @@
             <input type="button" id="submit" value="Send"/>
         </form>
 
-        <!-- TO DO : tableau  -->
+        <table border="1" id="tab"> 
+         <caption> Valeurs numériques d'un caractère </caption> 
+         <tr> 
+                  <th> Caractere </th> 
+                  <th> Decimal </th> 
+                  <th> Hexadecimal </th> 
+                  <th> HTML </th> 
+		  <th> Unicode </th>
+         </tr> 
+        </table> 
 
         <script>
 
