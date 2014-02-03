@@ -17,8 +17,6 @@ public class Converter extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     
-    private RequestDispatcher dispat;
-    
 
     /**
      * @param request
@@ -49,22 +47,5 @@ public class Converter extends HttpServlet {
             PrintWriter out=response.getWriter();
             out.println(MapVersJson.conversionJson(conversions));
         }
-        
-         try (PrintWriter out=response.getWriter()){
-            
-            request.setAttribute("unicode",conversionUnicode(hex));
-            request.setAttribute("hex",conversionHex(val));
-            request.setAttribute("dec",conversionDec(c));
-            request.setAttribute("html",conversionHTML(val));
-            
-	        dispat = request.getRequestDispatcher("./webapp/WEB-INF/Converter.jsp");  
-            dispat.forward(request, response);
-            
-            
-            
-            }
-        
-        
-        
     }
 }
