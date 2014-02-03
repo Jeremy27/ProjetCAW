@@ -50,7 +50,7 @@ public class TestCaractere {
         Caractere caractere2 = new Caractere('à');
         assertEquals("&agrave;", caractere2.getHtml());
         
-        Caractere caractere3 = new Caractere(' ');
+        Caractere caractere3 = new Caractere(' ');
         assertEquals("&nbsp;", caractere3.getHtml());
     }
     

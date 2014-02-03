@@ -17,14 +17,13 @@ public class Caractere {
     private final String _hex;
     private final String _html;
     private final String _unicode;
-    private final int _decimal;
+    private int _decimal;
     
     public Caractere(char c) {
         _caractere = c;
         _decimal = Integer.parseInt(Integer.toString(_caractere));
         _hex = Integer.toHexString(_decimal);
         _html = StringEscapeUtils.escapeHtml(Character.toString(c));
-        
         _unicode = "\\u" + _hex;
     }
 
