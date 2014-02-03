@@ -21,6 +21,9 @@ import javax.servlet.http.HttpServletResponse;
 public class Converter extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
+    
+    private RequestDispatcher dispat;
+    
 
     /**
      * @param request
