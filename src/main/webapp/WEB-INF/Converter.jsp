@@ -44,6 +44,8 @@
                         e.preventDefault();
                         $('input#submit').click();
 
+                    } else if(e.keyCode === 32) {
+                        $('#caractere').attr("value", String.fromCharCode(160));
                     }
                 });
 
@@ -105,6 +107,8 @@
                                         ligne.appendChild(unicode);
                                         
                                         $("#tab").append(ligne);
+                                        
+                                        $('#caractere').attr("value","");
 
                                     },
                                     error: function(e)
