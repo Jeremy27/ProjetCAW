@@ -20,7 +20,7 @@
             <input type="button" id="submit" value="Send"/>
         </form>
 
-        <table border="1" id="1"> 
+        <table border="1" id="tab"> 
          <caption> Valeurs numériques d'un caractère </caption> 
          <tr> 
                   <th> Caractere </th> 
@@ -30,7 +30,6 @@
 		  <th> Unicode </th>
          </tr> 
         </table> 
-
 
         <script>
 
