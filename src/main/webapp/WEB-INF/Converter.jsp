@@ -106,7 +106,6 @@
                                         ligne.appendChild(unicode);
                                         
                                         $("#tab").append(ligne);
-                                        //$("#tab").append("<tr><td>"+caractere+"</td><td>"+data.dec+"</td><td>"+data.hex+"</td><td>"+escape(data.html)+"</td><td>"+data.unicode+"</td></tr>");
 
                                     },
                                     error: function(e)
