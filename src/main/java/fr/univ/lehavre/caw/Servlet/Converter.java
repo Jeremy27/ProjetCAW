@@ -38,6 +38,7 @@ public class Converter extends HttpServlet {
             String unicode = c.getUnicode();
 
             HashMap<String, String> conversions = new HashMap<String, String>();
+            conversions.put("char", Character.toString(caractere));
             conversions.put("dec", Integer.toString(val));
             conversions.put("hex", hex);
             conversions.put("html", html);
