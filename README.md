@@ -8,7 +8,7 @@ git pull origin serveur
 =======
 Client
 ====
-Laura - Jamila - Grégory - Alaaeddine <br><br>
+Laura - Jamila - Grégory - Alaaeddine - ELHARBYLY<br><br>
 Accès à la branche :<br>
 git push origin client <br>
 git pull origin client
