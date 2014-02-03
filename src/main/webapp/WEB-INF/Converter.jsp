@@ -6,6 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/aladin.css">
+        <link rel="stylesheet" href="css/styles.css">
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.0.js"></script>
 
         <title>CharConverter</title>
