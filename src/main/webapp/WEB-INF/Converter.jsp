@@ -22,11 +22,10 @@
         </form>
 
         <table border="1" id="tab"> 
-         <caption> Valeurs numériques d'un caractère </caption> 
          <tr> 
-                  <th> Caractere </th> 
-                  <th> Decimal </th> 
-                  <th> Hexadecimal </th> 
+                  <th> Caractère </th> 
+                  <th> Décimal </th> 
+                  <th> Hexadécimal </th> 
                   <th> HTML </th> 
 		  <th> Unicode </th>
          </tr> 
