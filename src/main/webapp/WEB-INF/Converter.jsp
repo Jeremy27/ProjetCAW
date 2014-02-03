@@ -31,7 +31,6 @@
          </tr> 
         </table> 
 
-
         <script>
 
             $(document).ready(function()
@@ -66,7 +65,9 @@
                                     data: {caractere: caractere},
                                     success: function(data)
                                     {
-                                        // TO DO : recupere la reponse du serveur et l'envoie au tableau
+    
+                          		  $("#tab").append("<tr><td>"+caractere+"</td><td>"+data.dec+"</td><td>"+data.hex+"</td><td>"+data.html+"</td><td>"+data.unicode+"</td></tr>");
+
                                     },
                                     error: function(e)
                                     {
